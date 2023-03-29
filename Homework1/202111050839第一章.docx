@@ -1,0 +1,19 @@
+WWW：World Wide Web，万维网
+HTTP：Hypertext Transfer Protocol，超文本传输协议
+HTML：Hypertext Markup Language，超文本标记语言
+URL：Uniform Resource Locator，统一资源定位符
+FTP：File Transfer Protocol，文件传输协议
+ASCII：美国信息交换标准代码
+绝对路径和相对路径是指文件在计算机中的存储位置。绝对路径是指文件在计算机中的完整路径，包括盘符、目录和文件名。相对路径是指文件相对于当前目录的路径。例如，假设当前目录为C:\Users\user\Desktop\test，则文件C:\Users\user\Desktop\test\example.txt的绝对路径为C:\Users\user\Desktop\test\example.txt，而相对路径为.\example.txt。
+
+URL（Uniform Resource Locator）由以下几部分组成：
+
+协议（Protocol）：指定访问资源所使用的协议，例如HTTP、HTTPS、FTP等。
+主机名（Host Name）：指定资源所在的主机名或IP地址。
+百度URL的组成部分如下：
+
+协议（Protocol）：指定访问资源所使用的协议，例如HTTP、HTTPS等。百度使用的是HTTPS协议。
+主机名（Host Name）：指定资源所在的主机名或IP地址。百度的主机名为www.baidu.com。
+路径（Path）：指定资源所在的路径。百度的路径为/。
+查询字符串（Query String）：包含传递给服务器的参数和值。百度的查询字符串包含了搜索关键字、搜索结果页码等信息。
+因此，百度URL的完整格式为https://www.baidu.com/，如果在搜索框中输入了搜索关键字，则会在URL中添加查询字符串。

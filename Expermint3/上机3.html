@@ -1,0 +1,104 @@
+//使用HTML5中的音频元素
+<audio controls>
+    <source src="music.mp3" type="audio/mpeg">
+    <source src="music.ogg" type="audio/ogg">
+    Your browser does not support the audio element.
+  </audio>
+
+  
+  //使用HTML5中的视频元素
+  <video width="640" height="360" controls>
+    <source src="movie.mp4" type="video/mp4">
+    <source src="movie.ogg" type="video/ogg">
+    Your browser does not support the video tag.
+  </video>
+
+  //使用HTML5中的新表单输入元素（部分）
+  <form>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+  
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+  
+    <label for="tel">Phone:</label>
+    <input type="tel" id="tel" name="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+  
+    <label for="url">Website:</label>
+    <input type="url" id="url" name="url" required>
+  
+    <label for="date">Date:</label>
+    <input type="date" id="date" name="date" required>
+  
+    <input type="submit" value="Submit">
+  </form>
+
+  //使用CSS3中的圆角矩形、文本阴影
+  .rounded {
+    border-radius: 10px;
+  }
+  
+  .shadow {
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  }
+
+  //使用CSS3中的2D、3D转换：
+  /* 2D 转换 */
+.rotate {
+  transform: rotate(45deg);
+}
+
+.scale {
+  transform: scale(1.5);
+}
+
+.translate {
+  transform: translate(50px, 50px);
+}
+
+.skew {
+  transform: skew(30deg, 10deg);
+}
+
+/* 3D 转换 */
+.rotate3d {
+  transform: rotate3d(1, 1, 0, 45deg);
+}
+
+.perspective {
+  perspective: 1000px;
+}
+
+.translate3d {
+  transform: translate3d(0, 0, 100px);
+}
+
+//使用CSS3中的过渡和动画
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  transition: width 2s, height 2s, background-color 2s;
+}
+
+.box:hover {
+  width: 200px;
+  height: 200px;
+  background-color: blue;
+}
+
+
+@keyframes pin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid black;
+  border-top: 5px solid white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}

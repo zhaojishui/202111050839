@@ -1,0 +1,70 @@
+显示当前日期的年月日和周几，计算离放假（7.16）还有多少天：
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript Examples</title>
+  <script>
+    // 1. Display current date and calculate days until a holiday
+    function displayDate() {
+      var currentDate = new Date();
+
+      var year = currentDate.getFullYear();
+      var month = currentDate.getMonth() + 1;
+      var day = currentDate.getDate();
+      var dayOfWeek = currentDate.getDay();
+
+      var vacationDate = new Date(year, 6, 16);
+      var timeDiff = vacationDate.getTime() - currentDate.getTime();
+      var daysToVacation = Math.ceil(timeDiff / (1000 * 3600 * 24));
+
+      document.getElementById("currentDate").innerHTML = "Current Date: " + year + "-" + month + "-" + day + ", Day: " + getDayOfWeek(dayOfWeek);
+      document.getElementById("daysToVacation").innerHTML = "Days until vacation: " + daysToVacation;
+    }
+
+    // Helper function to get day of the week
+    function getDayOfWeek(day) {
+      var daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+      return daysOfWeek[day];
+    }
+
+    // 2. Sort a string array
+    function sortArray() {
+      var students = ["Alice", "Bob", "Charlie", "David"];
+      students.sort();
+      document.getElementById("sortedArray").innerHTML = students.join(", ");
+    }
+
+    // 3. Create an object using constructor and prototype
+    function Car(color, type, price) {
+      this.color = color;
+      this.type = type;
+      this.price = price;
+    }
+
+    Car.prototype.start = function() {
+      document.getElementById("carStatus").innerHTML = "Car started.";
+    };
+
+    Car.prototype.stop = function() {
+      document.getElementById("carStatus").innerHTML = "Car stopped.";
+    };
+
+    function useCar() {
+      var myCar = new Car("Red", "Sedan", 20000);
+      myCar.start();
+    }
+  </script>
+</head>
+<body>
+  <h1>JavaScript Examples</h1>
+  <button onclick="displayDate()">Display Date</button>
+  <p id="currentDate"></p>
+  <p id="daysToVacation"></p>
+
+  <button onclick="sortArray()">Sort Array</button>
+  <p id="sortedArray"></p>
+
+  <button onclick="useCar()">Use Car</button>
+  <p id="carStatus"></p>
+</body>
+</html>
